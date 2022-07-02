@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* header */
+header {
+  position: absolute;
+  z-index: 1;
+  /* Z-index cao thì đè z-index thấp,thuộc tính z-index chỉ đi chung với position  */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .navbar-brand i {
+  color: #35a22c;
+  font-size: 2.7rem;
+}
+header .navbar-brand span {
+  font-size: 2.3rem;
+}
+header ul li {
+  margin: 0 10px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+header ul li.active a {
+  color: #35a22c !important;
+}
+header ul li:hover a {
+  color: #35a22c !important;
+}
+header ul li::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  display: block;
+  background-color: green;
+  transition: all 0.5s;
+}
+header ul li.active::after {
+  width: 100%;
+}
+header ul li:hover::after {
+  width: 100%;
+}
+
+/* Carousel */
+.carousel-item {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url(../img/finland.jpg);
+  /* khi dùng bg-img thì height không có */
+  /* height: 700px; */
+}
+.carousel-item:nth-child(2) {
+  background-image: url(../img/mountains.jpg);
+}
+.carousel-item:nth-child(3) {
+  background-image: url(../img/mountains-1.jpg);
+}
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.carousel-indicators li.active {
+  background-color: green;
+}
+.img__thumb {
+  width: 150px;
+  margin: auto;
+}
+.img__thumb img {
+  border-radius: 50%;
+}
+#demo .carousel__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 43, 54, 0.5);
+}
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.carousel-caption p {
+  font-size: 1.5rem;
+}
+/* Project */
+#project h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#project p {
+  font-size: 1rem;
+}
+#project .col-sm-6 {
+  margin-bottom: 2rem;
+}
+#project .card {
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+  border: none;
+  cursor: pointer;
+}
+#project .card .card-title {
+  color: black;
+  transition: all, 0.5s;
+}
+#project .card:hover .card-title {
+  color: #35a22c;
+}
+#project .card .card-body {
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
+}
+#project .card:hover .card-body {
+  border-color: #35a22c;
+
+  border-top-color: transparent;
+}
+#project .card .card-body h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+#project .card .card-body p {
+  color: gray;
+  padding-bottom: 20px;
+}
+#project .nav-pills .nav-link.active,
+#project .nav-pills .show > .nav-link {
+  background-color: #35a22c;
+  border-color: #35a22c;
+  color: white;
+}
+#project .nav {
+  margin-bottom: 40px;
+}
+#project .nav-link {
+  padding: 0.5rem;
+  margin-bottom: 10px;
+}
+/* .nav-pills .nav-item {
+  border: 1px solid #1a1d2d;
+  border-radius: 5px;
+  margin-right: 10px;
+} */
+
+#project .nav-pills .nav-item a {
+  color: black;
+  border: 1px solid #1a1d2d;
+  border-radius: 5px;
+  /* margin-right: 10px; */
+}
+
+/* Services */
+#services {
+  background-image: url(../img/3.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+  background-attachment: fixed;
+  position: relative;
+}
+#services .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000089;
+}
+#services .card {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  /* làm nhòe-mờ background */
+  transition: all 0.5s;
+}
+#services .card:hover {
+  background-color: black;
+  border-color: white;
+}
+#services .title {
+  position: relative;
+}
+#services .card .card-body i {
+  color: green;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* education */
+#edu {
+  position: relative;
+  padding: 100px 0;
+}
+#edu .bg__edu {
+  background-image: url(../img/memphis_3.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 50% auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+#edu .row .edu__leftwrapper {
+  background-color: rgba(255, 255, 255, 0.55);
+  padding: 35px;
+
+  border-radius: 10px;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+}
+#edu .row .col-md-5 h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+#edu .row .col-md-5 p {
+  font-size: 14px;
+}
+
+/* footer */
+footer {
+  background-color: #222222;
+  padding: 40px 0;
+}
+footer .footer__top {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #454545;
+}
+footer .footer__top a {
+  color: gray;
+}
+footer .footer__top i {
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #454545;
+  margin-right: 10px;
+}
+footer .footer__top a:hover i {
+  border: 1px solid green;
+  color: green;
+}
+footer .footer__bottom p {
+  color: #aaaaaa;
+  padding-top: 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+footer .footer__bottom a {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+footer .footer__bottom a:hover {
+  color: green !important;
+}
+/* Responsive */
+/* header */
+@media screen and (max-width: 575.98px) {
+  header .navbar .navbar-brand i {
+    font-size: 2rem;
+  }
+  header .navbar .navbar-brand span {
+    font-size: 1.8rem;
+  }
+}
+/* carousel */
+@media screen and (max-width: 575.98px) {
+  #demo .carousel-inner .carousel-caption h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 575.98px) {
+  #demo .carousel-inner .carousel-item .carousel-caption h3 {
+    font-size: 2.3rem;
+  }
+  #demo .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 1.3rem;
+  }
+}
+/* Project */
+@media screen and (max-width: 575.98px) {
+  #project .project__content .nav li {
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 575.98px) {
+  #project .project__content li {
+    margin-right: 10px;
+  }
+}
+/* services */
+@media screen and (max-width: 575.98px) {
+  #services .service__content .row .col-md-4 {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 765.98px) {
+  #services .service__content .row .card {
+    margin-bottom: 40px;
+  }
+}
+/* education */
+@media screen and (max-width: 767.98px) {
+  #edu .bg__edu {
+    background-size: cover;
+  }
+}
